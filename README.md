@@ -24,16 +24,20 @@ npm run dev
 npm run build
 ```
 
-## Deploying to GitHub Pages
+## Deploying to GitHub Pages (`https://dsrichard97.github.io/Portfolio.10.15.26/`)
 
-1. Push this repository to GitHub:
+1. Commit and push this repository to GitHub:
    ```bash
    git init
    git add .
-   git commit -m "feat: upgrade portfolio"
-   git remote add origin https://github.com/<your-username>/<repo-name>.git
+   git commit -m "feat: upgrade portfolio for FP&A"
+   git branch -M main
+   git remote add origin https://github.com/dsrichard97/Portfolio.10.15.26.git
    git push -u origin main
    ```
-2. In your GitHub repository, open **Settings → Pages**.
-3. Under **Build and deployment > Source**, select **GitHub Actions**.
-4. The workflow in `.github/workflows/deploy.yml` will automatically build and publish your portfolio!
+2. In your GitHub repository:
+   - Go to **Settings** → **Pages**
+   - Under **Build and deployment > Source**, select **GitHub Actions**
+3. The workflow in `.github/workflows/deploy.yml` will automatically build and publish your portfolio in ~1–2 minutes!
+4. Once completed, your live portfolio will be available at:
+   **https://dsrichard97.github.io/Portfolio.10.15.26/**

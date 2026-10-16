@@ -112,38 +112,45 @@ export default defineConfig({
 
         {/* Content */}
         <div className="p-6 sm:p-8 space-y-6 max-h-[75vh] overflow-y-auto text-sm font-body">
+          <div className="bg-emerald-950/40 border border-emerald-500/40 p-3.5 rounded-xl text-xs font-mono text-emerald-300 flex items-center justify-between">
+            <span>Target URL: https://dsrichard97.github.io/Portfolio.10.15.26/</span>
+            <span className="text-emerald-400 font-bold">Configured ✓</span>
+          </div>
+
           <p className="text-neutral-300 leading-relaxed">
-            This portfolio is built with zero server runtime requirements, making it 100% turnkey to deploy for free on <strong className="text-neutral-100">GitHub Pages</strong> or <strong className="text-neutral-100">Vercel</strong>.
+            Your portfolio is pre-configured with <code className="text-emerald-400">base: '/Portfolio.10.15.26/'</code> in <code className="text-neutral-200">vite.config.ts</code> so that all assets, styles, and routes resolve automatically on GitHub Pages.
           </p>
 
           {/* 3 Step Protocol */}
           <div className="space-y-4">
             <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-2">
-              <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
-                <span>Step 1: Push Code to GitHub</span>
+              <div className="flex items-center gap-2 text-xs font-mono text-emerald-400">
+                <span>Step 1: Push Code to your GitHub Repo</span>
               </div>
               <p className="text-xs text-neutral-300">
-                Initialize a Git repository and push this codebase to your personal GitHub account.
+                Commit and push your files to your GitHub repository:
               </p>
               <div className="bg-neutral-900 p-2.5 rounded font-mono text-[11px] text-neutral-300 space-y-1">
-                <p>git init && git add .</p>
-                <p>git commit -m "feat: upgrade portfolio"</p>
-                <p>git remote add origin https://github.com/&lt;your-username&gt;/portfolio.git</p>
+                <p>git init</p>
+                <p>git add .</p>
+                <p>git commit -m "feat: upgrade portfolio for FP&A"</p>
+                <p>git branch -M main</p>
+                <p>git remote add origin https://github.com/dsrichard97/Portfolio.10.15.26.git</p>
                 <p>git push -u origin main</p>
               </div>
             </div>
 
             <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-2">
-              <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
-                <span>Step 2: Enable GitHub Pages in Repo Settings</span>
+              <div className="flex items-center gap-2 text-xs font-mono text-emerald-400">
+                <span>Step 2: Enable GitHub Pages with GitHub Actions</span>
               </div>
               <p className="text-xs text-neutral-300">
-                In your GitHub repository, navigate to <strong className="text-white">Settings → Pages</strong>, then under <strong className="text-white">Build and deployment &gt; Source</strong>, choose <strong className="text-amber-400">GitHub Actions</strong>.
+                In your GitHub repo, go to <strong className="text-white">Settings → Pages</strong>, then under <strong className="text-white">Build and deployment &gt; Source</strong>, choose <strong className="text-emerald-400">GitHub Actions</strong>.
               </p>
             </div>
 
             <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-2">
-              <div className="flex items-center justify-between text-xs font-mono text-amber-400">
+              <div className="flex items-center justify-between text-xs font-mono text-emerald-400">
                 <span>Step 3: Automated Workflow (.github/workflows/deploy.yml)</span>
                 <button
                   onClick={handleCopyWorkflow}
@@ -163,7 +170,7 @@ export default defineConfig({
                 </button>
               </div>
               <p className="text-xs text-neutral-300">
-                This repository already includes <code className="text-amber-300">.github/workflows/deploy.yml</code>. Whenever you push to <code className="text-neutral-200">main</code>, GitHub Actions builds and publishes your site automatically!
+                This repository already includes <code className="text-emerald-300">.github/workflows/deploy.yml</code>. Whenever you push to <code className="text-neutral-200">main</code>, GitHub Actions builds and publishes your site automatically! It takes 1–2 minutes to show up live.
               </p>
               <div className="bg-neutral-900 p-3 rounded font-mono text-[10px] text-neutral-300 max-h-48 overflow-y-auto leading-relaxed">
                 <pre>{githubActionsYaml}</pre>
